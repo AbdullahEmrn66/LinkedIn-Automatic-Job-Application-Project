@@ -53,10 +53,10 @@ except:
     email = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.XPATH, "/html/body/div/main/div[2]/div[1]/form/div[1]/input"))
     )
-    email.send_keys("abdullahemrn66@gmail.com")
+    email.send_keys(user_email)
 
     password = driver.find_element(By.XPATH, '//*[@id="password"]')
-    password.send_keys("Abdullah321@*")
+    password.send_keys(user_password)
 
     login = driver.find_element(By.XPATH, "/html/body/div/main/div[2]/div[1]/form/div[3]/button")
     login.click()
